@@ -1,0 +1,10 @@
+data_source:
+  train:
+    name: hackaton_train_types_recom.parquet
+    s3_path: hackathon2/data
+  test:
+    name: hackaton_test_types_recom.parquet
+    s3_path: hackathon2/data
+missing_values_replacements:
+  no_photo: 'no_photo'
+  no_category: 'unknown'

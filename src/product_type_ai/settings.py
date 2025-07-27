@@ -1,6 +1,10 @@
 """Project settings. There is no need to edit this file unless you want to change values
 from the Kedro defaults. For further information, including these default values, see
 https://docs.kedro.org/en/stable/kedro_project_setup/settings.html."""
+from dotenv import load_dotenv
+load_dotenv()  # загрузит переменные из `.env`
+
+from omegaconf.resolvers import oc
 
 # Instantiated project hooks.
 # For example, after creating a hooks.py and defining a ProjectHooks class there, do
@@ -20,17 +24,20 @@ https://docs.kedro.org/en/stable/kedro_project_setup/settings.html."""
 # }
 
 # Directory that holds configuration.
-# CONF_SOURCE = "conf"
+CONF_SOURCE = "conf"
 
 # Class that manages how configuration is loaded.
-# from kedro.config import OmegaConfigLoader
+from kedro.config import OmegaConfigLoader
 
-# CONFIG_LOADER_CLASS = OmegaConfigLoader
+CONFIG_LOADER_CLASS = OmegaConfigLoader
 
 # Keyword arguments to pass to the `CONFIG_LOADER_CLASS` constructor.
 CONFIG_LOADER_ARGS = {
     "base_env": "base",
     "default_run_env": "local",
+    "custom_resolvers": {
+        "oc.env": oc.env,
+    }
     # "config_patterns": {
     #     "spark" : ["spark*/"],
     #     "parameters": ["parameters*", "parameters*/**", "**/parameters*"],
