@@ -2,6 +2,7 @@ ipython>=8.10
 jupyterlab>=3.0
 notebook
 kedro~=1.0.0
+kedro-datasets~=8.0.0
 
 pytest~=8.4.1
 pandas~=2.3.1
@@ -23,3 +24,13 @@ omegaconf~=2.3.0
 dotenv~=0.9.9
 python-dotenv~=1.1.1
 minio~=7.2.16
+torch~=2.7.1
+torchvision~=0.22.1
+tqdm~=4.67.1
+aiohttp~=3.12.14
+pyarrow~=21.0.0
+optuna~=4.4.0
+protobuf~=5.29.5
+catboost~=1.2.8
+scipy~=1.16.0
+nltk~=3.9.1

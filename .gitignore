@@ -2,12 +2,12 @@
 # KEDRO PROJECT
 
 # ignore all local configuration
-conf/local/**
-!conf/local/.gitkeep
+trash/conf/local/**
+!trash/conf/local/.gitkeep
 .telemetry
 
 # ignore potentially sensitive credentials files
-conf/**/*credentials*
+trash/conf/**/*credentials*
 
 # ignore everything in the following folders
 data/**
@@ -95,7 +95,7 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
-.coverage
+trash/.coverage
 .coverage.*
 .cache
 nosetests.xml
@@ -121,7 +121,7 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+trash/docs/_build/
 
 # PyBuilder
 target/
@@ -160,3 +160,5 @@ venv.bak/
 
 # mlflow local runs
 mlruns/*
+
+trash
